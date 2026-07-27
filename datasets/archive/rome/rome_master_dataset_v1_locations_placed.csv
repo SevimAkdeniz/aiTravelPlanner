@@ -1,0 +1,41 @@
+﻿location_id,location_name,normalized_name,city,country
+1,Colosseum,colosseum,Rome,Italy
+2,Roman Forum,roman forum,Rome,Italy
+3,Palatine Hill,palatine hill,Rome,Italy
+4,Pantheon,pantheon,Rome,Italy
+5,Trevi Fountain,trevi fountain,Rome,Italy
+6,Spanish Steps,spanish steps,Rome,Italy
+7,Piazza Navona,piazza navona,Rome,Italy
+8,Vatican Museums,vatican museums,Rome,Italy
+9,St. Peter's Basilica,st peters basilica,Rome,Italy
+10,Sistine Chapel,sistine chapel,Rome,Italy
+11,Castel Sant'Angelo,castel santangelo,Rome,Italy
+12,Villa Borghese,villa borghese,Rome,Italy
+13,Borghese Gallery,borghese gallery,Rome,Italy
+14,Capitoline Museums,capitoline museums,Rome,Italy
+15,Altare della Patria,altare della patria,Rome,Italy
+16,Campo de' Fiori,campo de fiori,Rome,Italy
+17,Trastevere,trastevere,Rome,Italy
+18,Piazza Venezia,piazza venezia,Rome,Italy
+19,Piazza del Popolo,piazza del popolo,Rome,Italy
+20,Basilica of Saint Mary Major,basilica of saint mary major,Rome,Italy
+21,Baths of Caracalla,baths of caracalla,Rome,Italy
+22,Circus Maximus,circus maximus,Rome,Italy
+23,Trajan's Market,trajans market,Rome,Italy
+24,Ara Pacis,ara pacis,Rome,Italy
+25,Doria Pamphilj Gallery,doria pamphilj gallery,Rome,Italy
+26,MAXXI Museum,maxxi museum,Rome,Italy
+27,National Roman Museum,national roman museum,Rome,Italy
+28,Piazza Barberini,piazza barberini,Rome,Italy
+29,Quirinal Palace,quirinal palace,Rome,Italy
+30,Janiculum Hill,janiculum hill,Rome,Italy
+31,Orange Garden,orange garden,Rome,Italy
+32,Mouth of Truth,mouth of truth,Rome,Italy
+33,Tiber Island,tiber island,Rome,Italy
+34,Appian Way,appian way,Rome,Italy
+35,Catacombs of San Callisto,catacombs of san callisto,Rome,Italy
+36,Basilica of Saint John Lateran,basilica of saint john lateran,Rome,Italy
+37,Basilica of Saint Paul Outside the Walls,basilica of saint paul outside the walls,Rome,Italy
+38,Pincian Hill,pincian hill,Rome,Italy
+39,Domus Aurea,domus aurea,Rome,Italy
+40,Largo di Torre Argentina,largo di torre argentina,Rome,Italy

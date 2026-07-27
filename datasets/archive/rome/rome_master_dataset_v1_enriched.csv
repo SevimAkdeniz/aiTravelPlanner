@@ -1,0 +1,41 @@
+﻿location_id,location_name,normalized_name,city,country,opentripmap_match_name,opentripmap_match_score,source_opentripmap_id,source_osm_id,source_wikidata_id,latitude,longitude,category_raw,opentripmap_rate,popularity_score,data_source,opentripmap_match_status
+1,Colosseum,colosseum,Rome,Italy,colosseum,100.0,R1834818,relation/1834818,Q10285,41.890262603759766,12.493086814880373,"sport,mineshafts,architecture,historic,archaeology,other_archaeological_sites,industrial_facilities,historic_architecture,cultural,theatres_and_entertainments,interesting_places,music_venues,amphitheatres,stadiums",7,7,OpenTripMap,strong_match
+2,Roman Forum,roman forum,Rome,Italy,roman forum,100.0,R1841080,relation/1841080,Q180212,41.8917236328125,12.486671447753906,"historic,archaeology,interesting_places,other_archaeological_sites",3,3,OpenTripMap,strong_match
+3,Palatine Hill,palatine hill,Rome,Italy,palazzo del tritone,62.5,,,,,,,,,,not_matched
+4,Pantheon,pantheon,Rome,Italy,spanish steps,47.61904761904761,,,,,,,,,,not_matched
+5,Trevi Fountain,trevi fountain,Rome,Italy,trevi fountain,100.0,W23322002,way/23322002,Q185382,41.900978088378906,12.483284950256348,"fountains,historic,monuments_and_memorials,urban_environment,cultural,interesting_places,sculptures,monuments",3,3,OpenTripMap,strong_match
+6,Spanish Steps,spanish steps,Rome,Italy,spanish steps,100.0,W134400816,way/134400816,Q848072,41.90605163574219,12.48287296295166,"other,unclassified_objects,interesting_places,tourist_object",3,3,OpenTripMap,strong_match
+7,Piazza Navona,piazza navona,Rome,Italy,fontana di piazza colonna,63.1578947368421,,,,,,,,,,not_matched
+8,Vatican Museums,vatican museums,Rome,Italy,wax museum,64.0,,,,,,,,,,not_matched
+9,St. Peter's Basilica,st peters basilica,Rome,Italy,basilica di san marco,83.72093023255813,W140031952,way/140031952,Q1479910,41.89609909057617,12.4815034866333,"religion,churches,interesting_places,catholic_churches",7,7,OpenTripMap,possible_match
+10,Sistine Chapel,sistine chapel,Rome,Italy,cornaro chapel,57.14285714285714,,,,,,,,,,not_matched
+11,Castel Sant'Angelo,castel santangelo,Rome,Italy,cappella di sant'elena,60.0,,,,,,,,,,not_matched
+12,Villa Borghese,villa borghese,Rome,Italy,villa borghese,100.0,Q3661788,,Q3661788,41.912841796875,12.486536026000977,"palaces,architecture,historic_architecture,interesting_places",3,3,OpenTripMap,strong_match
+13,Borghese Gallery,borghese gallery,Rome,Italy,galleria borghese,100.0,N1440405490,node/1440405490,Q841506,41.91411972045898,12.492060661315918,"cultural,museums,interesting_places,art_galleries",7,7,OpenTripMap,strong_match
+14,Capitoline Museums,capitoline museums,Rome,Italy,lupa capitolina,70.96774193548387,,,,,,,,,,not_matched
+15,Altare della Patria,altare della patria,Rome,Italy,monument to vittorio emanuele ii,100.0,R1849830,relation/1849830,Q506234,41.89468765258789,12.48306655883789,"architecture,historic_architecture,interesting_places,other_buildings_and_structures",7,7,OpenTripMap,strong_match
+16,Campo de' Fiori,campo de fiori,Rome,Italy,torre dei capocci,62.5,,,,,,,,,,not_matched
+17,Trastevere,trastevere,Rome,Italy,mura serviane,52.17391304347826,,,,,,,,,,not_matched
+18,Piazza Venezia,piazza venezia,Rome,Italy,palazzo venezia,100.0,W140186882,way/140186882,Q1123879,41.89605331420898,12.48182201385498,"palaces,architecture,historic_architecture,interesting_places",7,7,OpenTripMap,strong_match
+19,Piazza del Popolo,piazza del popolo,Rome,Italy,piazza del viminale,66.66666666666667,,,,,,,,,,not_matched
+20,Basilica of Saint Mary Major,basilica of saint mary major,Rome,Italy,basilica of saint mary major,100.0,W131564482,way/131564482,Q186282,41.89762496948242,12.498470306396484,"religion,churches,interesting_places,catholic_churches",7,7,OpenTripMap,strong_match
+21,Baths of Caracalla,baths of caracalla,Rome,Italy,baths of diocletian,64.86486486486487,,,,,,,,,,not_matched
+22,Circus Maximus,circus maximus,Rome,Italy,lacus curtius,59.25925925925925,,,,,,,,,,not_matched
+23,Trajan's Market,trajans market,Rome,Italy,mercati di traiano,100.0,W207936435,way/207936435,Q478642,41.8956184387207,12.486105918884276,"architecture,historic_architecture,historic,archaeology,interesting_places,destroyed_objects,other_archaeological_sites",3,3,OpenTripMap,strong_match
+24,Ara Pacis,ara pacis,Rome,Italy,museum of the baths of diocletian,60.71428571428572,,,,,,,,,,not_matched
+25,Doria Pamphilj Gallery,doria pamphilj gallery,Rome,Italy,palazzo doria pamphilj,100.0,N706793341,node/706793341,Q385387,41.89782333374024,12.481560707092283,"cultural,museums,interesting_places,art_galleries",7,7,OpenTripMap,strong_match
+26,MAXXI Museum,maxxi museum,Rome,Italy,museo nazionale del palazzo di venezia,65.82278481012658,,,,,,,,,,not_matched
+27,National Roman Museum,national roman museum,Rome,Italy,museo nazionale romano,100.0,Q1135392,,Q1135392,41.90125274658203,12.498294830322266,"national_museums,museums,cultural,interesting_places",3,3,OpenTripMap,strong_match
+28,Piazza Barberini,piazza barberini,Rome,Italy,triton fountain,100.0,W662063745,way/662063745,Q267971,41.90366363525391,12.488481521606444,"fountains,historic,monuments_and_memorials,urban_environment,cultural,interesting_places,sculptures,monuments",7,7,OpenTripMap,strong_match
+29,Quirinal Palace,quirinal palace,Rome,Italy,quirinal palace,100.0,R2707110,relation/2707110,Q223079,41.90065383911133,12.486031532287598,"palaces,architecture,historic_architecture,interesting_places",7,7,OpenTripMap,strong_match
+30,Janiculum Hill,janiculum hill,Rome,Italy,senaculum,66.66666666666667,,,,,,,,,,not_matched
+31,Orange Garden,orange garden,Rome,Italy,arco di gallieno,64.86486486486487,,,,,,,,,,not_matched
+32,Mouth of Truth,mouth of truth,Rome,Italy,fontana della barcaccia,63.41463414634146,,,,,,,,,,not_matched
+33,Tiber Island,tiber island,Rome,Italy,tabernae novae,64.28571428571428,,,,,,,,,,not_matched
+34,Appian Way,appian way,Rome,Italy,aurelian walls,58.33333333333333,,,,,,,,,,not_matched
+35,Catacombs of San Callisto,catacombs of san callisto,Rome,Italy,catacomb of san nicomede,61.224489795918366,,,,,,,,,,not_matched
+36,Basilica of Saint John Lateran,basilica of saint john lateran,Rome,Italy,basilica of saint mary major,79.3103448275862,,,,,,,,,,not_matched
+37,Basilica of Saint Paul Outside the Walls,basilica of saint paul outside the walls,Rome,Italy,basilica di san marco,67.85714285714286,,,,,,,,,,not_matched
+38,Pincian Hill,pincian hill,Rome,Italy,porta pinciana,60.0,,,,,,,,,,not_matched
+39,Domus Aurea,domus aurea,Rome,Italy,domus aurea,100.0,Q21328958,,Q21328958,41.891387939453125,12.495277404785156,"historic,archaeology,interesting_places,other_archaeological_sites",3,3,OpenTripMap,strong_match
+40,Largo di Torre Argentina,largo di torre argentina,Rome,Italy,torre dei conti,61.53846153846154,,,,,,,,,,not_matched
