@@ -1,0 +1,11 @@
+﻿profile_name,history_architecture,museum_art,nature_photography,gastronomy_evening,free_low_budget,family_with_children,fast_first_time_visitor,slow_relaxed_traveler,rainy_weather,shopping_city_life
+history_architecture,1.0,0.2,0.3,0.5,0.4,0.3,0.6,0.2,0.2,0.4
+museum_art,0.2,1.0,0.1,0.1,0.1,0.5,0.2,0.8,1.0,0.2
+nature_photography,0.3,0.1,1.0,0.4,0.6,0.3,0.4,0.2,0.1,0.2
+gastronomy_evening,0.5,0.1,0.4,1.0,0.4,0.4,0.4,0.3,0.1,0.8
+free_low_budget,0.4,0.1,0.6,0.4,1.0,0.3,0.6,0.2,0.1,0.2
+family_with_children,0.3,0.5,0.3,0.4,0.3,1.0,0.2,0.7,0.5,0.4
+fast_first_time_visitor,0.6,0.2,0.4,0.4,0.6,0.2,1.0,0.2,0.2,0.3
+slow_relaxed_traveler,0.2,0.8,0.2,0.3,0.2,0.7,0.2,1.0,0.8,0.3
+rainy_weather,0.2,1.0,0.1,0.1,0.1,0.5,0.2,0.8,1.0,0.2
+shopping_city_life,0.4,0.2,0.2,0.8,0.2,0.4,0.3,0.3,0.2,1.0

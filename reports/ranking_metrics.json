@@ -1,0 +1,11 @@
+{
+  "test_user_count": 200,
+  "locations_per_user": 40,
+  "top_1_accuracy": 0.685,
+  "mean_top_3_overlap": 0.691667,
+  "mean_top_5_overlap": 0.791,
+  "mean_top_10_overlap": 0.828,
+  "mean_ndcg_at_5": 0.990766,
+  "mean_ndcg_at_10": 0.99192,
+  "mean_reciprocal_rank": 0.812762
+}

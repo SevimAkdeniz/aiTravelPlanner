@@ -1,0 +1,14 @@
+{
+  "model_version": "v2",
+  "model_name": "gradient_boosting",
+  "random_seed": 42,
+  "test_size": 0.2,
+  "training_rows": 32000,
+  "test_rows": 8000,
+  "training_user_count": 800,
+  "test_user_count": 200,
+  "feature_count_before_encoding": 96,
+  "target_column": "suitability_score",
+  "group_column": "user_profile_id",
+  "model_file": "models\\location_recommender_v2.joblib"
+}

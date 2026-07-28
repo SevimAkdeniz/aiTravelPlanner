@@ -1,0 +1,5 @@
+﻿model_name,mae,mse,rmse,r2,training_seconds
+gradient_boosting,2.345563,8.624854,2.93681,0.895488,60.0383
+linear_regression,2.50688,10.029598,3.166954,0.878466,0.7333
+random_forest,2.871449,13.069498,3.615176,0.84163,3.288
+decision_tree,3.2314,16.797289,4.09845,0.796458,1.1757
