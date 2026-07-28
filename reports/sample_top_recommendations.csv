@@ -1,0 +1,51 @@
+﻿user_profile_id,predicted_rank,location_id,location_name,actual_score,predicted_score,absolute_error,actual_rank
+11,1,6,Spanish Steps,71.1925,67.910037,3.282463,1
+11,2,10,Sistine Chapel,61.3401,64.412885,3.072785,11
+11,3,20,Basilica of Saint Mary Major,63.2964,63.847858,0.551458,9
+11,4,36,Basilica of Saint John Lateran,63.3063,63.81249,0.50619,8
+11,5,37,Basilica of Saint Paul Outside the Walls,65.0231,63.495233,1.527867,4
+11,6,22,Circus Maximus,66.8555,62.912282,3.943218,2
+11,7,40,Largo di Torre Argentina,64.1392,62.584652,1.554548,6
+11,8,15,Altare della Patria,63.5644,61.801914,1.762486,7
+11,9,29,Quirinal Palace,65.4636,61.636843,3.826757,3
+11,10,16,Campo de' Fiori,64.2209,60.723283,3.497617,5
+24,1,6,Spanish Steps,66.902,71.571718,4.669718,5
+24,2,7,Piazza Navona,67.9323,69.283664,1.351364,2
+24,3,16,Campo de' Fiori,66.8294,69.246151,2.416751,6
+24,4,15,Altare della Patria,67.516,68.377935,0.861935,4
+24,5,5,Trevi Fountain,68.5126,66.933647,1.578953,1
+24,6,31,Orange Garden,63.5812,66.825197,3.243997,12
+24,7,18,Piazza Venezia,67.7008,66.608284,1.092516,3
+24,8,38,Pincian Hill,65.0528,66.428668,1.375868,7
+24,9,4,Pantheon,64.3275,65.566123,1.238623,8
+24,10,29,Quirinal Palace,64.1424,64.938934,0.796534,9
+26,1,9,St. Peter's Basilica,82.1726,77.92445,4.24815,1
+26,2,11,Castel Sant'Angelo,76.2212,72.017133,4.204067,4
+26,3,1,Colosseum,78.6491,71.991319,6.657781,2
+26,4,13,Borghese Gallery,75.3361,71.225955,4.110145,5
+26,5,15,Altare della Patria,77.6146,70.735922,6.878678,3
+26,6,26,MAXXI Museum,73.7242,70.581088,3.143112,8
+26,7,25,Doria Pamphilj Gallery,75.0382,70.570585,4.467615,6
+26,8,10,Sistine Chapel,69.9251,69.882508,0.042592,15
+26,9,36,Basilica of Saint John Lateran,72.4482,69.643326,2.804874,11
+26,10,20,Basilica of Saint Mary Major,70.7235,69.634685,1.088815,13
+31,1,9,St. Peter's Basilica,73.6432,75.028974,1.385774,1
+31,2,1,Colosseum,73.1393,69.491387,3.647913,2
+31,3,7,Piazza Navona,69.6378,68.668215,0.969585,8
+31,4,11,Castel Sant'Angelo,68.2179,67.632922,0.584978,10
+31,5,36,Basilica of Saint John Lateran,70.2907,67.564647,2.726053,4
+31,6,20,Basilica of Saint Mary Major,71.0497,67.564647,3.485053,3
+31,7,4,Pantheon,70.0563,67.525301,2.530999,6
+31,8,21,Baths of Caracalla,68.7171,66.994125,1.722975,9
+31,9,17,Trastevere,67.9677,66.219016,1.748684,12
+31,10,37,Basilica of Saint Paul Outside the Walls,68.1223,66.154638,1.967662,11
+40,1,4,Pantheon,77.8734,72.75547,5.11793,1
+40,2,20,Basilica of Saint Mary Major,70.2031,70.443533,0.240433,5
+40,3,36,Basilica of Saint John Lateran,69.9038,70.414922,0.511122,7
+40,4,15,Altare della Patria,72.415,69.738755,2.676245,2
+40,5,29,Quirinal Palace,69.9944,69.009961,0.984439,6
+40,6,37,Basilica of Saint Paul Outside the Walls,69.7021,68.073199,1.628901,8
+40,7,31,Orange Garden,67.8238,66.807917,1.015883,9
+40,8,9,St. Peter's Basilica,66.5958,66.770394,0.174594,13
+40,9,18,Piazza Venezia,71.5923,66.685627,4.906673,3
+40,10,6,Spanish Steps,67.5535,66.552267,1.001233,10

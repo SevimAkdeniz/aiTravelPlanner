@@ -1,0 +1,7 @@
+﻿scenario_name,trip_days,planned_day_count,planned_location_count,total_entry_fee,maximum_total_entry_fee,total_route_km,total_travel_minutes,average_suitability_score,skipped_location_count,first_location,last_location,warning_count,warnings
+history_architecture,3,3,13,113.0,120,11.43,254,77.75,0,St. Peter's Basilica,Piazza Navona,0,
+free_low_budget,3,3,14,0.0,0,12.76,280,70.03,0,St. Peter's Basilica,Janiculum Hill,0,
+nature_photography,2,2,8,8.0,30,10.93,205,68.12,0,Villa Borghese,Janiculum Hill,0,
+gastronomy_evening,2,2,10,46.0,50,7.32,177,62.69,0,Trastevere,Pantheon,0,
+family_with_children,3,3,8,92.0,100,6.78,139,61.94,0,Vatican Museums,Altare della Patria,0,
+fast_first_time_visitor,2,2,12,25.0,100,7.75,202,72.33,0,Pantheon,Tiber Island,0,

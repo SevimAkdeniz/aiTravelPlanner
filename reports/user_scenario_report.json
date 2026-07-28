@@ -1,0 +1,148 @@
+{
+  "scenario_count": 10,
+  "top_n": 10,
+  "unique_top_location_count": 6,
+  "average_profile_similarity": 0.3533,
+  "most_different_profiles": {
+    "first_profile": "museum_art",
+    "second_profile": "gastronomy_evening",
+    "top10_overlap_ratio": 0.1
+  },
+  "most_similar_profiles": {
+    "first_profile": "museum_art",
+    "second_profile": "rainy_weather",
+    "top10_overlap_ratio": 1.0
+  },
+  "scenario_summaries": [
+    {
+      "profile_name": "history_architecture",
+      "top_location": "St. Peter's Basilica",
+      "top_score": 85.79,
+      "average_top10_score": 78.93,
+      "minimum_top10_score": 76.37,
+      "maximum_top10_score": 85.79,
+      "free_location_count": 4,
+      "affordable_location_count": 10,
+      "average_entry_fee": 7.7,
+      "average_visit_duration": 79.5,
+      "category_distribution": "historic: 6, religious: 3, monument: 1"
+    },
+    {
+      "profile_name": "museum_art",
+      "top_location": "Borghese Gallery",
+      "top_score": 81.23,
+      "average_top10_score": 74.14,
+      "minimum_top10_score": 68.38,
+      "maximum_top10_score": 81.23,
+      "free_location_count": 1,
+      "affordable_location_count": 10,
+      "average_entry_fee": 13.7,
+      "average_visit_duration": 100.5,
+      "category_distribution": "museum: 7, religious: 2, historic: 1"
+    },
+    {
+      "profile_name": "nature_photography",
+      "top_location": "Villa Borghese",
+      "top_score": 76.05,
+      "average_top10_score": 68.31,
+      "minimum_top10_score": 62.53,
+      "maximum_top10_score": 76.05,
+      "free_location_count": 9,
+      "affordable_location_count": 10,
+      "average_entry_fee": 0.5,
+      "average_visit_duration": 64.5,
+      "category_distribution": "park: 2, historic: 2, viewpoint: 2, religious: 1, monument: 1, square: 1, landmark: 1"
+    },
+    {
+      "profile_name": "gastronomy_evening",
+      "top_location": "Trastevere",
+      "top_score": 71.9,
+      "average_top10_score": 63.71,
+      "minimum_top10_score": 59.45,
+      "maximum_top10_score": 71.9,
+      "free_location_count": 7,
+      "affordable_location_count": 10,
+      "average_entry_fee": 4.1,
+      "average_visit_duration": 81.0,
+      "category_distribution": "historic: 3, square: 2, district: 1, religious: 1, landmark: 1, monument: 1, park: 1"
+    },
+    {
+      "profile_name": "free_low_budget",
+      "top_location": "St. Peter's Basilica",
+      "top_score": 84.44,
+      "average_top10_score": 73.21,
+      "minimum_top10_score": 67.19,
+      "maximum_top10_score": 84.44,
+      "free_location_count": 10,
+      "affordable_location_count": 10,
+      "average_entry_fee": 0.0,
+      "average_visit_duration": 69.0,
+      "category_distribution": "religious: 4, square: 2, monument: 1, park: 1, historic: 1, landmark: 1"
+    },
+    {
+      "profile_name": "family_with_children",
+      "top_location": "Villa Borghese",
+      "top_score": 65.96,
+      "average_top10_score": 63.31,
+      "minimum_top10_score": 60.23,
+      "maximum_top10_score": 65.96,
+      "free_location_count": 3,
+      "affordable_location_count": 10,
+      "average_entry_fee": 11.4,
+      "average_visit_duration": 114.0,
+      "category_distribution": "museum: 4, historic: 4, park: 1, religious: 1"
+    },
+    {
+      "profile_name": "fast_first_time_visitor",
+      "top_location": "Pantheon",
+      "top_score": 81.15,
+      "average_top10_score": 74.95,
+      "minimum_top10_score": 72.52,
+      "maximum_top10_score": 81.15,
+      "free_location_count": 7,
+      "affordable_location_count": 10,
+      "average_entry_fee": 4.3,
+      "average_visit_duration": 64.5,
+      "category_distribution": "religious: 5, historic: 2, monument: 1, square: 1, palace: 1"
+    },
+    {
+      "profile_name": "slow_relaxed_traveler",
+      "top_location": "Borghese Gallery",
+      "top_score": 71.72,
+      "average_top10_score": 65.39,
+      "minimum_top10_score": 61.69,
+      "maximum_top10_score": 71.72,
+      "free_location_count": 2,
+      "affordable_location_count": 10,
+      "average_entry_fee": 12.6,
+      "average_visit_duration": 103.5,
+      "category_distribution": "museum: 6, religious: 2, historic: 1, park: 1"
+    },
+    {
+      "profile_name": "rainy_weather",
+      "top_location": "Borghese Gallery",
+      "top_score": 76.44,
+      "average_top10_score": 71.74,
+      "minimum_top10_score": 67.6,
+      "maximum_top10_score": 76.44,
+      "free_location_count": 1,
+      "affordable_location_count": 10,
+      "average_entry_fee": 13.7,
+      "average_visit_duration": 100.5,
+      "category_distribution": "museum: 7, religious: 2, historic: 1"
+    },
+    {
+      "profile_name": "shopping_city_life",
+      "top_location": "Campo de' Fiori",
+      "top_score": 64.18,
+      "average_top10_score": 62.57,
+      "minimum_top10_score": 60.16,
+      "maximum_top10_score": 64.18,
+      "free_location_count": 5,
+      "affordable_location_count": 10,
+      "average_entry_fee": 7.5,
+      "average_visit_duration": 84.0,
+      "category_distribution": "historic: 4, square: 2, landmark: 1, district: 1, religious: 1, museum: 1"
+    }
+  ]
+}

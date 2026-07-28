@@ -1,0 +1,38 @@
+{
+  "best_model": "gradient_boosting",
+  "selection_metric": "lowest_mae",
+  "models": [
+    {
+      "model_name": "gradient_boosting",
+      "mae": 2.345563,
+      "mse": 8.624854,
+      "rmse": 2.93681,
+      "r2": 0.895488,
+      "training_seconds": 60.0383
+    },
+    {
+      "model_name": "linear_regression",
+      "mae": 2.50688,
+      "mse": 10.029598,
+      "rmse": 3.166954,
+      "r2": 0.878466,
+      "training_seconds": 0.7333
+    },
+    {
+      "model_name": "random_forest",
+      "mae": 2.871449,
+      "mse": 13.069498,
+      "rmse": 3.615176,
+      "r2": 0.84163,
+      "training_seconds": 3.288
+    },
+    {
+      "model_name": "decision_tree",
+      "mae": 3.2314,
+      "mse": 16.797289,
+      "rmse": 4.09845,
+      "r2": 0.796458,
+      "training_seconds": 1.1757
+    }
+  ]
+}

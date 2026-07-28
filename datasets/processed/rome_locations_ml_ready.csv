@@ -1,0 +1,41 @@
+﻿location_id,location_name,latitude,longitude,opentripmap_match_score,opentripmap_rate,popularity_score,average_visit_duration_min,min_visit_duration_min,max_visit_duration_min,entry_fee_adult,entry_fee_student,tourist_importance_score,history_score,museum_score,art_score,architecture_score,photography_score,nature_score,gastronomy_score,shopping_score,religious_score,public_transport_score,walking_difficulty_score,reservation_required,is_family_friendly,is_open_24h,is_free,good_for_rainy_weather,good_for_hot_weather,needs_verification,category,sub_category,indoor_outdoor,recommended_visit_time,budget_level,weather_sensitivity,data_confidence_level
+1,Colosseum,41.890262603759766,12.493086814880373,100.0,7.0,7.0,120,45,120,18,0,10,10,0,3,10,10,0,0,0,0,7,6,1,1,0,0,0,1,1,historic,amphitheatre,outdoor,any,medium,medium,high
+2,Roman Forum,41.8917236328125,12.486671447753906,100.0,3.0,3.0,120,45,120,18,0,10,10,0,3,8,9,0,0,0,0,7,7,0,1,0,0,0,1,1,historic,archaeological_site,outdoor,any,medium,medium,high
+3,Palatine Hill,41.889305114746094,12.487109184265137,100.0,3.0,3.0,90,45,120,18,0,9,10,0,3,5,8,5,0,0,0,7,7,0,1,0,0,0,1,1,historic,archaeological_site,outdoor,any,medium,medium,high
+4,Pantheon,41.89861679077149,12.47683334350586,100.0,2.0,2.0,45,45,120,5,0,10,9,0,3,10,9,0,0,0,6,7,4,0,1,0,0,1,1,1,historic,temple_church,indoor,any,low,medium,high
+5,Trevi Fountain,41.900978088378906,12.483284950256348,100.0,3.0,3.0,30,45,120,0,0,10,5,0,3,8,10,0,0,0,0,7,4,0,1,0,1,0,1,1,landmark,fountain,outdoor,any,free,medium,high
+6,Spanish Steps,41.90605163574219,12.48287296295166,100.0,3.0,3.0,45,45,120,0,0,9,5,0,3,7,9,0,0,7,0,7,4,0,1,0,1,0,1,1,landmark,stairs_square,outdoor,any,free,medium,high
+7,Piazza Navona,41.8989816,12.4731439,100.0,3.0,3.0,60,45,120,0,0,10,5,0,3,9,10,0,6,0,0,7,4,0,1,0,1,0,1,1,square,historic_square,outdoor,any,free,medium,medium
+8,Vatican Museums,41.90496063232422,12.45466136932373,100.0,3.0,3.0,180,45,120,20,0,10,8,10,10,5,6,0,0,0,0,7,4,1,1,0,0,1,1,1,museum,art_museum,indoor,any,medium,medium,high
+9,St. Peter's Basilica,41.902156829833984,12.453712463378906,100.0,7.0,7.0,90,45,120,0,0,10,9,0,3,10,9,0,0,0,10,7,4,0,1,0,1,1,1,1,religious,basilica,indoor,any,free,medium,high
+10,Sistine Chapel,41.90293502807617,12.4544038772583,100.0,3.0,3.0,45,45,120,20,0,10,5,8,10,5,6,0,0,0,9,7,4,1,1,0,0,1,1,1,religious,chapel_art,indoor,any,medium,medium,high
+11,Castel Sant'Angelo,41.903099060058594,12.466400146484377,100.0,2.0,2.0,90,45,120,15,0,9,9,6,3,8,9,0,0,0,0,7,4,0,1,0,0,0,1,1,historic,castle_museum,mixed,any,medium,medium,high
+12,Villa Borghese,41.912841796875,12.486536026000977,100.0,3.0,3.0,90,45,120,0,0,8,5,0,3,5,8,10,0,0,0,7,4,0,1,0,1,0,1,1,park,urban_park,outdoor,any,free,medium,high
+13,Borghese Gallery,41.91411972045898,12.492060661315918,100.0,7.0,7.0,120,45,120,15,0,9,5,10,10,5,6,0,0,0,0,7,4,1,1,0,0,1,1,1,museum,art_gallery,indoor,any,medium,medium,high
+14,Capitoline Museums,41.892669677734375,12.482208251953123,100.0,3.0,3.0,120,45,120,16,0,8,9,9,8,5,6,0,0,0,0,7,4,0,1,0,0,1,1,1,museum,history_art_museum,indoor,any,medium,medium,high
+15,Altare della Patria,41.89468765258789,12.48306655883789,100.0,7.0,7.0,60,45,120,0,0,9,8,0,3,9,10,0,0,0,0,7,4,0,1,0,1,0,1,1,monument,national_monument,outdoor,any,free,medium,high
+16,Campo de' Fiori,41.8956638,12.4720465,100.0,3.0,3.0,45,45,120,0,0,7,5,0,3,5,7,0,8,6,0,7,4,0,1,0,1,0,1,1,square,market_square,outdoor,any,free,medium,medium
+17,Trastevere,41.887222,12.465556,100.0,3.0,3.0,120,45,120,0,0,9,7,0,3,5,8,0,10,0,0,7,4,0,1,0,1,0,1,1,district,historic_neighbourhood,outdoor,evening,free,medium,medium
+18,Piazza Venezia,41.89605331420898,12.48182201385498,100.0,7.0,7.0,45,45,120,0,0,8,5,0,3,8,8,0,0,0,0,7,4,0,1,0,1,0,1,1,square,central_square,outdoor,any,free,medium,high
+19,Piazza del Popolo,41.910711,12.476319,100.0,3.0,3.0,60,45,120,0,0,8,5,0,3,8,9,0,0,0,0,7,4,0,1,0,1,0,1,1,square,historic_square,outdoor,any,free,medium,medium
+20,Basilica of Saint Mary Major,41.89762496948242,12.498470306396484,100.0,7.0,7.0,60,45,120,0,0,8,8,0,3,9,6,0,0,0,10,7,4,0,1,0,1,1,1,1,religious,basilica,indoor,any,free,medium,high
+21,Baths of Caracalla,41.87882995605469,12.492473602294922,100.0,7.0,7.0,90,45,120,8,0,8,9,0,3,8,8,0,0,0,0,7,4,0,1,0,0,0,1,1,historic,archaeological_site,outdoor,any,low,medium,high
+22,Circus Maximus,41.88615798950195,12.485308647155762,100.0,3.0,3.0,45,45,120,0,0,7,8,0,3,5,7,0,0,0,0,7,4,0,1,0,1,0,1,1,historic,ancient_stadium,outdoor,any,free,medium,high
+23,Trajan's Market,41.8956184387207,12.486105918884276,100.0,3.0,3.0,90,45,120,15,0,8,9,7,3,8,6,0,0,0,0,7,4,0,1,0,0,0,1,1,historic,archaeological_museum,outdoor,any,medium,medium,high
+24,Ara Pacis,41.9061393737793,12.475457191467283,100.0,3.0,3.0,60,45,120,10,0,7,8,7,7,5,6,0,0,0,0,7,4,0,1,0,0,1,1,1,museum,historic_monument_museum,indoor,any,low,medium,high
+25,Doria Pamphilj Gallery,41.89782333374024,12.481560707092283,100.0,7.0,7.0,90,45,120,16,0,7,5,8,9,5,6,0,0,0,0,7,4,0,1,0,0,1,1,1,museum,art_gallery,indoor,any,medium,medium,high
+26,MAXXI Museum,41.9288444519043,12.466667175292969,93.1818181818182,6.0,6.0,90,45,120,12,0,7,5,8,8,8,6,0,0,0,0,7,4,0,1,0,0,1,1,1,museum,modern_art_museum,indoor,any,medium,medium,medium
+27,National Roman Museum,41.90125274658203,12.498294830322266,100.0,3.0,3.0,120,45,120,12,0,8,9,9,3,5,6,0,0,0,0,7,4,0,1,0,0,1,1,1,museum,archaeology_museum,indoor,any,medium,medium,high
+28,Piazza Barberini,41.90366363525391,12.488481521606444,100.0,7.0,7.0,30,45,120,0,0,6,5,0,3,7,7,0,0,0,0,7,4,0,1,0,1,0,1,1,square,historic_square_fountain,outdoor,any,free,medium,high
+29,Quirinal Palace,41.90065383911133,12.486031532287598,100.0,7.0,7.0,45,45,120,0,0,7,7,0,3,8,7,0,0,0,0,7,4,0,1,0,1,0,1,1,palace,government_palace,outdoor,any,free,medium,high
+30,Janiculum Hill,41.89157485961914,12.461164474487305,100.0,3.0,3.0,60,45,120,0,0,7,5,0,3,5,9,6,0,0,0,7,7,0,1,0,1,0,1,1,viewpoint,hill_viewpoint,outdoor,sunset,free,medium,high
+31,Orange Garden,41.88542556762695,12.479907989501951,100.0,1.0,1.0,45,45,120,0,0,7,5,0,3,5,9,8,0,0,0,7,4,0,1,0,1,0,1,1,park,viewpoint_garden,outdoor,sunset,free,medium,high
+32,Mouth of Truth,41.88825607299805,12.481544494628906,87.5,3.0,3.0,30,45,120,0,0,7,6,0,3,5,8,0,0,0,0,7,4,0,1,0,1,0,1,1,landmark,historic_sculpture,outdoor,any,free,medium,medium
+33,Tiber Island,41.8896369934082,12.479233741760254,100.0,1.0,1.0,45,45,120,0,0,6,6,0,3,5,7,0,0,0,0,7,4,0,1,0,1,0,1,1,landmark,island,outdoor,any,free,medium,high
+34,Appian Way,41.866944,12.5325,100.0,3.0,3.0,120,45,120,0,0,8,10,0,3,5,8,6,0,0,0,7,8,0,1,0,1,0,1,1,historic,ancient_road,outdoor,any,free,medium,medium
+35,Catacombs of San Callisto,41.85890197753906,12.510753631591797,88.0,3.0,3.0,60,45,120,10,0,7,9,0,3,5,6,0,0,0,7,7,4,0,1,0,0,1,1,1,historic,catacombs,indoor,any,low,medium,medium
+36,Basilica of Saint John Lateran,41.88584899902344,12.505587577819824,100.0,7.0,7.0,60,45,120,0,0,8,8,0,3,9,6,0,0,0,10,7,4,0,1,0,1,1,1,1,religious,basilica,indoor,any,free,medium,high
+37,Basilica of Saint Paul Outside the Walls,41.85869598388672,12.476784706115724,100.0,7.0,7.0,60,45,120,0,0,7,8,0,3,8,6,0,0,0,10,7,4,0,1,0,1,1,1,1,religious,basilica,indoor,any,free,medium,high
+38,Pincian Hill,41.91104888916016,12.479573249816896,100.0,3.0,3.0,45,45,120,0,0,7,5,0,3,5,9,6,0,0,0,7,4,0,1,0,1,0,1,1,viewpoint,hill_viewpoint,outdoor,sunset,free,medium,high
+39,Domus Aurea,41.891387939453125,12.495277404785156,100.0,3.0,3.0,90,45,120,16,0,8,9,5,3,8,6,0,0,0,0,7,4,1,1,0,0,1,1,1,historic,archaeological_site,indoor,any,medium,medium,high
+40,Largo di Torre Argentina,41.89604187011719,12.476836204528809,100.0,3.0,3.0,45,45,120,0,0,7,8,0,3,5,7,0,0,0,0,7,4,0,1,0,1,0,1,1,historic,archaeological_square,outdoor,any,free,medium,high

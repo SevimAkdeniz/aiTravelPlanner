@@ -1,0 +1,11 @@
+﻿profile_name,top_location,top_score,average_top10_score,minimum_top10_score,maximum_top10_score,free_location_count,affordable_location_count,average_entry_fee,average_visit_duration,category_distribution
+history_architecture,St. Peter's Basilica,85.79,78.93,76.37,85.79,4,10,7.7,79.5,"historic: 6, religious: 3, monument: 1"
+museum_art,Borghese Gallery,81.23,74.14,68.38,81.23,1,10,13.7,100.5,"museum: 7, religious: 2, historic: 1"
+nature_photography,Villa Borghese,76.05,68.31,62.53,76.05,9,10,0.5,64.5,"park: 2, historic: 2, viewpoint: 2, religious: 1, monument: 1, square: 1, landmark: 1"
+gastronomy_evening,Trastevere,71.9,63.71,59.45,71.9,7,10,4.1,81.0,"historic: 3, square: 2, district: 1, religious: 1, landmark: 1, monument: 1, park: 1"
+free_low_budget,St. Peter's Basilica,84.44,73.21,67.19,84.44,10,10,0.0,69.0,"religious: 4, square: 2, monument: 1, park: 1, historic: 1, landmark: 1"
+family_with_children,Villa Borghese,65.96,63.31,60.23,65.96,3,10,11.4,114.0,"museum: 4, historic: 4, park: 1, religious: 1"
+fast_first_time_visitor,Pantheon,81.15,74.95,72.52,81.15,7,10,4.3,64.5,"religious: 5, historic: 2, monument: 1, square: 1, palace: 1"
+slow_relaxed_traveler,Borghese Gallery,71.72,65.39,61.69,71.72,2,10,12.6,103.5,"museum: 6, religious: 2, historic: 1, park: 1"
+rainy_weather,Borghese Gallery,76.44,71.74,67.6,76.44,1,10,13.7,100.5,"museum: 7, religious: 2, historic: 1"
+shopping_city_life,Campo de' Fiori,64.18,62.57,60.16,64.18,5,10,7.5,84.0,"historic: 4, square: 2, landmark: 1, district: 1, religious: 1, museum: 1"
