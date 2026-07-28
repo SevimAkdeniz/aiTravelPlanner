@@ -7,8 +7,7 @@ from typing import Any
 
 import pandas as pd
 
-from predict import predict_recommendations
-
+from src.predict import predict_recommendations
 
 OUTPUT_CSV_PATH = Path(
     "reports/latest_itinerary.csv"

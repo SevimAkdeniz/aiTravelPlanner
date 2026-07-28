@@ -8,8 +8,7 @@ import joblib
 import numpy as np
 import pandas as pd
 
-from feature_engineering import build_feature_dataframe
-
+from src.feature_engineering import build_feature_dataframe
 
 MODEL_PATH = Path(
     "models/location_recommender_v2.joblib"
