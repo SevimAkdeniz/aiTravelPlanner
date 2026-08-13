@@ -1,110 +1,87 @@
-# AI Travel Planner V1
+# AI Travel Planner
 
-AI Travel Planner, kullanıcı tercihlerini dikkate alarak kişiselleştirilmiş seyahat önerileri ve günlük gezi planı oluşturan bir seyahat planlama prototipidir.
+AI Travel Planner, kullanıcı tercihlerini dikkate alarak kişiselleştirilmiş seyahat önerileri ve günlük gezi planları oluşturan yapay zekâ destekli bir seyahat planlama prototipidir.
 
-Bu V1 sürümünde sistem Roma şehri üzerinde geliştirilmiştir. Kullanıcının ilgi alanı, bütçesi, seyahat temposu ve günlük zaman aralığına göre lokasyonlar skorlanır ve saatli gezi planı oluşturulur.
+Projenin mevcut sürümü Roma şehri üzerinde geliştirilmiştir. Sistem; kullanıcının ilgi alanları, bütçesi, seyahat temposu, günlük zaman aralığı, hava durumu tercihleri ve aile dostu mekân ihtiyacı gibi kriterlere göre turistik lokasyonları puanlar.
+
+V1 sürümünde kural tabanlı puanlama ve örnek gezi planı oluşturma altyapısı geliştirilmiştir.
+
+V2 sürümünde ise makine öğrenmesi tabanlı kişiselleştirilmiş öneri modeli, çok günlük gezi planlama motoru, FastAPI servis katmanı ve otomatik test altyapısı eklenmiştir.
+
+---
+
+# V1 — Kural Tabanlı Seyahat Planlama Sistemi
 
 ## V1 Kapsamı
 
-- Roma için 40 turistik lokasyonluk veri seti oluşturuldu.
-- OpenTripMap API ile lokasyon verileri çekildi.
-- OpenTripMap verileri master lokasyon listesiyle eşleştirildi.
-- Eksik lokasyonlar Wikidata ve manuel veri ile tamamlandı.
-- Planlama için kategori, süre, ücret, ilgi skorları ve area group kolonları eklendi.
-- Veri kaynakları ve güven seviyesi için confidence kolonları eklendi.
-- Kullanıcı profiline göre suitability score hesaplandı.
-- Farklı kullanıcı profilleriyle test yapıldı.
-- Roma için 3 günlük saatli örnek gezi planı üretildi.
+* Roma için 40 turistik lokasyonluk veri seti oluşturuldu.
+* OpenTripMap API ile lokasyon verileri çekildi.
+* OpenTripMap verileri master lokasyon listesiyle eşleştirildi.
+* Eksik lokasyonlar Wikidata ve manuel veri ile tamamlandı.
+* Planlama için kategori, süre, ücret, ilgi skorları ve area group kolonları eklendi.
+* Veri kaynakları ve güven seviyesi için confidence kolonları eklendi.
+* Kullanıcı profiline göre suitability score hesaplandı.
+* Farklı kullanıcı profilleriyle test yapıldı.
+* Roma için 3 günlük saatli örnek gezi planı üretildi.
 
-## Kullanılan Veri Kaynakları
+## V1 Kullanılan Veri Kaynakları
 
-- OpenTripMap API
-- Wikidata
-- Manual V1 Feature Engineering
+* OpenTripMap API
+* Wikidata
+* Manuel veri tamamlama
+* V1 Feature Engineering
 
 Lokasyon kimliği, koordinatlar ve kaynak ID bilgileri OpenTripMap ve Wikidata üzerinden oluşturulmuştur.
 
-Süre, ücret ve ilgi skorları V1 prototip için kural tabanlı başlangıç değerleri olarak atanmıştır. Bu alanlar sonraki sürümlerde resmi web siteleri, Google Places API ve kullanıcı geri bildirimleri ile geliştirilecektir.
+Süre, ücret ve ilgi skorları V1 prototipi için kural tabanlı başlangıç değerleri olarak atanmıştır.
 
-## Proje Klasör Yapısı
+Bu alanların sonraki sürümlerde resmi web siteleri, Google Places API ve gerçek kullanıcı geri bildirimleriyle geliştirilmesi planlanmaktadır.
 
-datasets/
-  raw/
-    rome/
-      opentripmap_rome_raw.csv
+## V1 Ana Veri Seti
 
-  master/
-    rome/
-      rome_master_dataset_v1.csv
-      rome_master_dataset_v1.xlsx
+Final V1 ana veri seti:
 
-  outputs/
-    scores/
-      rome_location_scores_history_architecture_user.csv
-      rome_location_scores_art_museum_user.csv
-      rome_location_scores_food_evening_user.csv
-      rome_location_scores_nature_slow_user.csv
-      rome_location_scores_low_budget_fast_user.csv
-      rome_location_scores_profile_comparison.csv
-
-    itineraries/
-      rome_sample_itinerary.csv
-      rome_sample_itinerary.xlsx
-
-  archive/
-    rome/
-      intermediate files
-
-scripts/
-  fetch_opentripmap_rome.py
-  create_rome_40_master_list.py
-  enrich_master_with_opentripmap.py
-  fetch_missing_opentripmap_by_name.py
-  complete_manual_locations.py
-  add_planning_features.py
-  add_data_confidence.py
-  score_locations.py
-  add_area_groups.py
-  create_sample_itinerary.py
-
-## Ana Dataset
-
-Final V1 ana dataset dosyası:
-
+```text
 datasets/master/rome/rome_master_dataset_v1.csv
+```
 
-Bu dosya Roma için 40 lokasyon içerir.
+Bu dosya Roma için 40 turistik lokasyon içermektedir.
 
-Ana dataset içinde şu veri grupları bulunur:
+Ana veri setinde şu veri grupları bulunmaktadır:
 
-- Lokasyon adı
-- Şehir ve ülke bilgisi
-- Koordinatlar
-- OpenTripMap ve Wikidata ID bilgileri
-- Kategori ve alt kategori
-- Ortalama ziyaret süresi
-- Giriş ücreti
-- Bütçe seviyesi
-- İlgi skorları
-- Turistik önem skoru
-- Hava durumu uygunluğu
-- Veri kaynağı ve güven seviyesi
+* Lokasyon adı
+* Şehir ve ülke bilgisi
+* Enlem ve boylam bilgisi
+* OpenTripMap ve Wikidata kimlikleri
+* Kategori ve alt kategori
+* Ortalama ziyaret süresi
+* Minimum ve maksimum ziyaret süresi
+* Giriş ücreti
+* Bütçe seviyesi
+* İlgi alanı skorları
+* Turistik önem skoru
+* Hava durumu uygunluğu
+* Aile dostu olma durumu
+* Ulaşım ve yürüme zorluğu bilgileri
+* Veri kaynağı
+* Veri güven seviyesi
 
-## Suitability Score Mantığı
+## V1 Suitability Score Mantığı
 
-Sistem her lokasyon için kullanıcının profiline göre 0-100 arasında uygunluk skoru hesaplar.
+Sistem, her lokasyon için kullanıcının profiline göre 0 ile 100 arasında uygunluk skoru hesaplar.
 
 V1 formülünde kullanılan bileşenler:
 
-- Interest match score
-- Importance score
-- Budget match score
-- Time match score
-- Tempo match score
-- Weather match score
+* Interest match score
+* Importance score
+* Budget match score
+* Time match score
+* Tempo match score
+* Weather match score
 
 Formül:
 
+```text
 suitability_score =
 interest_match * 0.35
 + importance_score * 0.25
@@ -112,813 +89,850 @@ interest_match * 0.35
 + time_match * 0.10
 + tempo_match * 0.10
 + weather_match * 0.05
+```
 
-## Test Edilen Kullanıcı Profilleri
+## V1 Test Edilen Kullanıcı Profilleri
 
-- history_architecture_user
-- art_museum_user
-- food_evening_user
-- nature_slow_user
-- low_budget_fast_user
+* history_architecture_user
+* art_museum_user
+* food_evening_user
+* nature_slow_user
+* low_budget_fast_user
 
-Profil skor çıktıları şu klasördedir:
+Profil skor çıktıları:
 
+```text
 datasets/outputs/scores/
+```
 
-## Örnek Gezi Planı
+## V1 Örnek Gezi Planı
 
 Final itinerary dosyası:
 
+```text
 datasets/outputs/itineraries/rome_sample_itinerary.csv
+```
 
 Örnek rota:
 
-1. Gün - Vatican Area
+### 1. Gün — Vatican Area
 
-- Vatican Museums
-- Sistine Chapel
-- St. Peter's Basilica
-- Castel Sant'Angelo
+* Vatican Museums
+* Sistine Chapel
+* St. Peter's Basilica
+* Castel Sant'Angelo
 
-2. Gün - Ancient Rome
+### 2. Gün — Ancient Rome
 
-- Colosseum
-- Roman Forum
-- Palatine Hill
-- Altare della Patria
+* Colosseum
+* Roman Forum
+* Palatine Hill
+* Altare della Patria
 
-3. Gün - Historic Center + Trastevere
+### 3. Gün — Historic Center ve Trastevere
 
-- Pantheon
-- Piazza Navona
-- Trevi Fountain
-- Piazza del Popolo
-- Trastevere
+* Pantheon
+* Piazza Navona
+* Trevi Fountain
+* Piazza del Popolo
+* Trastevere
 
-## Script Çalıştırma Sırası
+## V1 Script Çalıştırma Sırası
 
-1. python scripts/fetch_opentripmap_rome.py
-2. python scripts/create_rome_40_master_list.py
-3. python scripts/enrich_master_with_opentripmap.py
-4. python scripts/fetch_missing_opentripmap_by_name.py
-5. python scripts/complete_manual_locations.py
-6. python scripts/add_planning_features.py
-7. python scripts/add_data_confidence.py
-8. python scripts/score_locations.py
-9. python scripts/add_area_groups.py
-10. python scripts/create_sample_itinerary.py
-
-## Ortam Değişkenleri
-
-OpenTripMap API anahtarı `.env` dosyasında tutulur.
-
-OPENTRIPMAP_API_KEY=your_api_key_here
-
-`.env` dosyası GitHub'a yüklenmemelidir.
+```bash
+python scripts/fetch_opentripmap_rome.py
+python scripts/create_rome_40_master_list.py
+python scripts/enrich_master_with_opentripmap.py
+python scripts/fetch_missing_opentripmap_by_name.py
+python scripts/complete_manual_locations.py
+python scripts/add_planning_features.py
+python scripts/add_data_confidence.py
+python scripts/score_locations.py
+python scripts/add_area_groups.py
+python scripts/create_sample_itinerary.py
+```
 
 ## V1 Limitasyonları
 
-- Sadece Roma şehri desteklenmektedir.
-- Bazı planlama feature değerleri kural tabanlıdır.
-- Giriş ücretleri ve ziyaret süreleri V1 draft değerleridir.
-- Açılış ve kapanış saatleri henüz resmi kaynaklardan otomatik doğrulanmamıştır.
-- Gerçek rota süresi Google Maps gibi rota API'leriyle hesaplanmamaktadır.
-- Kullanıcı profili şu an script içinden test edilmektedir.
+* Sadece Roma şehri desteklenmektedir.
+* Bazı planlama özellikleri kural tabanlıdır.
+* Giriş ücretleri ve ziyaret süreleri başlangıç seviyesinde hazırlanmıştır.
+* Açılış ve kapanış saatleri resmi kaynaklardan otomatik doğrulanmamaktadır.
+* Gerçek rota süreleri Google Maps gibi servislerden alınmamaktadır.
+* Kullanıcı profili script içinden tanımlanmaktadır.
 
-## V2 Planı
+---
 
-- Yeni şehirlerin eklenmesi
-- Şehir bağımsız veri pipeline yapısı
-- Frontend form üzerinden kullanıcı tercihleri alma
-- MySQL veritabanı entegrasyonu
-- Google Places API ile rating, yorum sayısı ve opening hours verisi alma
-- Daha gelişmiş rota optimizasyonu
+# V2 — Makine Öğrenmesi Tabanlı Öneri Sistemi
 
+V2 sürümünde, V1 veri seti kullanılarak kişiselleştirilmiş bir makine öğrenmesi öneri sistemi geliştirilmiştir.
 
+Sistem, kullanıcı tercihlerini lokasyon özellikleriyle karşılaştırarak her lokasyon için kişisel bir uygunluk puanı üretir.
 
-\## V2 — Kişiselleştirilmiş Öneri Modeli ve Gezi Planlama Motoru
+## V2 Kapsamı
 
+* Roma lokasyon verilerinin makine öğrenmesine uygun hale getirilmesi
+* Kullanıcı ve lokasyon özelliklerinin birleştirilmesi
+* Sentetik kullanıcı profilleri oluşturulması
+* 40.000 kullanıcı-lokasyon eğitim satırı oluşturulması
+* Birden fazla regresyon modelinin eğitilmesi
+* En iyi modelin otomatik seçilmesi
+* Kullanıcıya özel lokasyon sıralaması
+* Her öneri için açıklama üretimi
+* Bütçe ve gezi temposu kontrolü
+* Çok günlük saatlik gezi planı oluşturma
+* Yaklaşık mesafe ve ulaşım süresi hesaplama
+* FastAPI servis katmanı
+* Swagger dokümantasyonu
+* Otomatik API testleri
 
+## Kullanılan Teknolojiler
 
-V2 sürümünde Roma lokasyonları için kişiselleştirilmiş bir makine öğrenmesi öneri sistemi, saatlik gezi planlama motoru ve FastAPI servis katmanı geliştirilmiştir.
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Joblib
+* FastAPI
+* Uvicorn
+* Pydantic
+* Pytest
+* HTTPX
+* OpenPyXL
 
-
-
-\### V2 Özellikleri
-
-
-
-\* Kullanıcı tercihlerine göre 40 Roma lokasyonunun puanlanması
-
-\* Her lokasyon için 0–100 arası kişisel uygunluk puanı
-
-\* “Neden önerildi?” açıklamaları
-
-\* Tarih, sanat, müze, mimari, doğa, gastronomi, alışveriş ve fotoğrafçılık ilgi alanları
-
-\* Bütçe, tempo, ziyaret zamanı, hava durumu ve aile tercihlerinin değerlendirilmesi
-
-\* Çok günlük saatlik gezi planı oluşturma
-
-\* Lokasyonlar arası yaklaşık mesafe ve ulaşım süresi hesaplama
-
-\* Toplam giriş ücreti bütçe kontrolü
-
-\* Öğle molası ve günlük lokasyon sınırı
-
-\* CSV ve Excel plan çıktıları
-
-\* FastAPI öneri ve plan endpoint’leri
-
-\* Swagger API dokümantasyonu
-
-\* Otomatik API testleri
-
-
-
-\### Kullanılan Teknolojiler
-
-
-
-\* Python
-
-\* Pandas
-
-\* NumPy
-
-\* Scikit-learn
-
-\* Gradient Boosting Regressor
-
-\* Joblib
-
-\* FastAPI
-
-\* Uvicorn
-
-\* Pydantic
-
-\* Pytest
-
-\* HTTPX
-
-\* OpenPyXL
-
-
-
-\### Proje Yapısı
-
-
+## Proje Klasör Yapısı
 
 ```text
-
 aiTravelPlanner/
-
 ├── api/
-
-│   ├── \_\_init\_\_.py
-
+│   ├── __init__.py
 │   └── main.py
-
+│
 ├── datasets/
-
+│   ├── raw/
+│   │   └── rome/
+│   │
 │   ├── master/
-
+│   │   └── rome/
+│   │       ├── rome_master_dataset_v1.csv
+│   │       └── rome_master_dataset_v1.xlsx
+│   │
 │   ├── processed/
-
-│   │   └── rome\_locations\_ml\_ready.csv
-
-│   └── training/
-
-│       ├── rome\_user\_location\_training.csv
-
-│       └── synthetic\_user\_profiles.csv
-
+│   │   └── rome_locations_ml_ready.csv
+│   │
+│   ├── training/
+│   │   ├── rome_user_location_training.csv
+│   │   └── synthetic_user_profiles.csv
+│   │
+│   ├── outputs/
+│   │   ├── scores/
+│   │   └── itineraries/
+│   │
+│   └── archive/
+│
 ├── models/
-
-│   ├── location\_recommender\_v2.joblib
-
-│   ├── feature\_columns.json
-
-│   └── model\_metadata.json
-
+│   ├── location_recommender_v2.joblib
+│   ├── feature_columns.json
+│   └── model_metadata.json
+│
 ├── reports/
-
+│   ├── model_comparison.csv
+│   ├── model_metrics.json
+│   ├── ranking_metrics.json
+│   ├── user_ranking_results.csv
+│   ├── sample_top_recommendations.csv
+│   ├── latest_recommendations.csv
+│   ├── latest_itinerary.csv
+│   ├── latest_itinerary.xlsx
+│   └── latest_itinerary_skipped.csv
+│
 ├── scripts/
-
+│   ├── fetch_opentripmap_rome.py
+│   ├── create_rome_40_master_list.py
+│   ├── enrich_master_with_opentripmap.py
+│   ├── fetch_missing_opentripmap_by_name.py
+│   ├── complete_manual_locations.py
+│   ├── add_planning_features.py
+│   ├── add_data_confidence.py
+│   ├── score_locations.py
+│   ├── add_area_groups.py
+│   └── create_sample_itinerary.py
+│
 ├── src/
-
-│   ├── \_\_init\_\_.py
-
+│   ├── __init__.py
 │   ├── preprocessing.py
-
-│   ├── feature\_engineering.py
-
-│   ├── generate\_training\_data.py
-
-│   ├── train\_models.py
-
-│   ├── evaluate\_ranking.py
-
+│   ├── feature_engineering.py
+│   ├── generate_training_data.py
+│   ├── train_models.py
+│   ├── evaluate_ranking.py
 │   ├── predict.py
-
-│   ├── create\_itinerary.py
-
-│   ├── test\_user\_scenarios.py
-
-│   └── test\_itinerary\_scenarios.py
-
+│   ├── create_itinerary.py
+│   ├── test_user_scenarios.py
+│   └── test_itinerary_scenarios.py
+│
 ├── tests/
-
-│   ├── \_\_init\_\_.py
-
-│   └── test\_api.py
-
+│   ├── __init__.py
+│   └── test_api.py
+│
 ├── requirements.txt
-
-└── README.md
-
+├── README.md
+└── .gitignore
 ```
 
+---
 
+# Kurulum
 
-\## Kurulum
-
-
-
-Projeyi bilgisayara indirdikten sonra proje klasörüne girin:
-
-
+Projeyi bilgisayarınıza indirin:
 
 ```bash
-
-cd aiTravelPlanner
-
+git clone PROJE_GITHUB_ADRESI
 ```
 
+Proje klasörüne girin:
 
+```bash
+cd aiTravelPlanner
+```
 
 Gerekli Python paketlerini yükleyin:
 
-
-
 ```bash
-
 pip install -r requirements.txt
-
 ```
-
-
 
 Python sürümünü kontrol edin:
 
-
-
 ```bash
-
 python --version
-
 ```
 
+Proje Python 3 ile çalışmaktadır.
 
+---
 
-\## Veri Ön İşleme
+# Ortam Değişkenleri
 
+OpenTripMap API anahtarı `.env` dosyasında tutulur.
 
+```env
+OPENTRIPMAP_API_KEY=your_api_key_here
+```
 
-Ana Roma veri setini model eğitimine uygun hale getirmek için:
+`.env` dosyası GitHub'a yüklenmemelidir.
 
+`.gitignore` dosyasında aşağıdaki satır bulunmalıdır:
 
+```text
+.env
+```
+
+---
+
+# V2 Veri Ön İşleme
+
+Ana Roma veri setini makine öğrenmesi modeline uygun hale getirmek için:
 
 ```bash
-
 python src/preprocessing.py
-
 ```
-
-
 
 Bu işlem aşağıdaki dosyayı oluşturur:
 
-
-
 ```text
-
-datasets/processed/rome\_locations\_ml\_ready.csv
-
+datasets/processed/rome_locations_ml_ready.csv
 ```
-
-
 
 İşlenmiş veri seti:
 
-
-
-\* 40 lokasyon
-
-\* 38 model özelliği
-
-\* 0 eksik değer
-
-
+* 40 lokasyon
+* 38 model özelliği
+* Eksik değeri olmayan temiz veri yapısı
 
 içermektedir.
 
+Modelde kullanılan başlıca lokasyon özellikleri:
 
+* Koordinatlar
+* OpenTripMap puanı
+* Popülerlik skoru
+* Ortalama ziyaret süresi
+* Minimum ve maksimum ziyaret süreleri
+* Giriş ücreti
+* Önem skoru
+* İlgi alanı skorları
+* Toplu taşıma skoru
+* Yürüme zorluğu skoru
+* Rezervasyon gereksinimi
+* Aile dostu olma durumu
+* Ücretsiz olma durumu
+* Yağmurlu ve sıcak hava uygunluğu
+* Kategori
+* Alt kategori
+* Indoor veya outdoor durumu
+* Area group
 
-\## Eğitim Verisi Oluşturma
+---
 
+# Feature Engineering
 
+Kullanıcı özellikleriyle lokasyon özelliklerini birleştirmek için:
+
+```bash
+python src/feature_engineering.py
+```
+
+Kullanıcı profili ile lokasyon verileri birleştirilerek modelin tahmin yapacağı özellik matrisi oluşturulur.
+
+Kullanıcı profilinde kullanılan alanlar:
+
+* history_interest
+* museum_interest
+* art_interest
+* architecture_interest
+* photography_interest
+* nature_interest
+* gastronomy_interest
+* shopping_interest
+* religious_interest
+* budget_level
+* max_entry_fee
+* tempo
+* preferred_visit_time
+* rainy_weather
+* hot_weather
+* family_friendly_required
+* free_place_preference
+
+---
+
+# Eğitim Verisi Oluşturma
 
 Sentetik kullanıcı profilleri ve kullanıcı-lokasyon eşleşmeleri oluşturmak için:
 
-
-
 ```bash
-
-python src/generate\_training\_data.py
-
+python src/generate_training_data.py
 ```
-
-
 
 Bu işlem:
 
-
-
-\* 1.000 sentetik kullanıcı profili
-
-\* Her kullanıcı için 40 lokasyon
-
-\* Toplam 40.000 kullanıcı-lokasyon eşleşmesi
-
-
+* 1.000 sentetik kullanıcı profili
+* Kullanıcı başına 40 lokasyon
+* Toplam 40.000 kullanıcı-lokasyon satırı
+* 106 kolonlu eğitim veri seti
 
 oluşturur.
 
-
-
 Çıktılar:
 
+```text
+datasets/training/synthetic_user_profiles.csv
+datasets/training/rome_user_location_training.csv
+```
 
+Hedef uygunluk puanı oluşturulurken şu bileşenler kullanılır:
+
+* İlgi alanı uyumu
+* Lokasyon önemi
+* Bütçe uyumu
+* Gezi temposu uyumu
+* Zaman tercihi
+* Hava durumu
+* Aile dostu olma durumu
+
+V2 hedef puan ağırlıkları:
 
 ```text
-
-datasets/training/synthetic\_user\_profiles.csv
-
-datasets/training/rome\_user\_location\_training.csv
-
+Interest Match: 0.45
+Importance: 0.12
+Budget Match: 0.15
+Tempo Match: 0.10
+Time Match: 0.07
+Weather Match: 0.06
+Family Match: 0.05
 ```
 
+---
 
+# Model Eğitimi
 
-\## Model Eğitimi
-
-
-
-Modelleri eğitmek ve karşılaştırmak için:
-
-
+Regresyon modellerini eğitmek ve karşılaştırmak için:
 
 ```bash
-
-python src/train\_models.py
-
+python src/train_models.py
 ```
 
+Kullanıcı bazlı veri ayrımı uygulanmıştır:
 
+```text
+Eğitim kullanıcıları: 800
+Test kullanıcıları: 200
+Eğitim satırı: 32.000
+Test satırı: 8.000
+```
 
 Karşılaştırılan modeller:
 
+* Linear Regression
+* Decision Tree Regressor
+* Random Forest Regressor
+* Gradient Boosting Regressor
 
+En iyi model olarak Gradient Boosting Regressor seçilmiştir.
 
-\* Linear Regression
+Model performansı:
 
-\* Decision Tree Regressor
-
-\* Random Forest Regressor
-
-\* Gradient Boosting Regressor
-
-
-
-Son değerlendirmede en iyi model olarak Gradient Boosting seçilmiştir.
-
-
+```text
+MAE: 2.3456
+RMSE: 2.9368
+R²: 0.8955
+```
 
 Kaydedilen model:
 
-
-
 ```text
-
-models/location\_recommender\_v2.joblib
-
+models/location_recommender_v2.joblib
 ```
 
-
-
-Model sonuçları:
-
-
+Modelle birlikte aşağıdaki dosyalar da kaydedilir:
 
 ```text
-
-reports/model\_comparison.csv
-
-reports/model\_metrics.json
-
-reports/test\_predictions.csv
-
+models/feature_columns.json
+models/model_metadata.json
 ```
 
+Model raporları:
 
+```text
+reports/model_comparison.csv
+reports/model_metrics.json
+reports/test_predictions.csv
+```
 
-\## Model Değerlendirmesi
+---
 
+# Sıralama Performansı
 
-
-Kullanıcı bazlı sıralama performansını değerlendirmek için:
-
-
+Kullanıcı bazlı öneri sıralamasını değerlendirmek için:
 
 ```bash
-
-python src/evaluate\_ranking.py
-
+python src/evaluate_ranking.py
 ```
 
+Elde edilen sıralama sonuçları:
 
-
-Hesaplanan metrikler:
-
-
-
-\* Top-1 doğruluğu
-
-\* Top-3 örtüşmesi
-
-\* Top-5 örtüşmesi
-
-\* Top-10 örtüşmesi
-
-\* NDCG@5
-
-\* NDCG@10
-
-\* MRR
-
-
+```text
+Top-1 Accuracy: 0.6850
+Top-3 Overlap: 0.6917
+Top-5 Overlap: 0.7910
+Top-10 Overlap: 0.8280
+NDCG@5: 0.9908
+NDCG@10: 0.9919
+MRR: 0.8128
+```
 
 Çıktılar:
 
+```text
+reports/ranking_metrics.json
+reports/user_ranking_results.csv
+reports/sample_top_recommendations.csv
+```
 
+---
+
+# Kullanıcı Senaryosu Testleri
+
+Farklı kullanıcı profillerinin farklı öneriler alıp almadığını kontrol etmek için:
+
+```bash
+python src/test_user_scenarios.py
+```
+
+Test edilen profiller:
+
+* Tarih ve mimari odaklı kullanıcı
+* Müze ve sanat odaklı kullanıcı
+* Doğa ve fotoğraf odaklı kullanıcı
+* Gastronomi ve akşam odaklı kullanıcı
+* Ücretsiz ve düşük bütçeli kullanıcı
+* Çocuklu aile
+* Hızlı gezi temposuna sahip kullanıcı
+* Yağmurlu hava profili
+* Alışveriş ve şehir yaşamı profili
+* Genel ilk ziyaret profili
+
+Senaryo testlerinde farklı profiller için farklı ilk öneriler üretilmiştir.
+
+Örnek sonuçlar:
 
 ```text
-
-reports/ranking\_metrics.json
-
-reports/user\_ranking\_results.csv
-
-reports/sample\_top\_recommendations.csv
-
+Tarih ve mimari: St. Peter's Basilica
+Müze ve sanat: Borghese Gallery
+Doğa: Villa Borghese
+Gastronomi: Trastevere
+Aile: Villa Borghese
+Alışveriş: Campo de' Fiori
 ```
 
+---
 
+# Öneri Üretme
 
-\## Kullanıcı Senaryosu Testleri
-
-
-
-Farklı kullanıcı profillerinin farklı öneriler alıp almadığını test etmek için:
-
-
+Varsayılan kullanıcı profili için öneri oluşturmak amacıyla:
 
 ```bash
-
-python src/test\_user\_scenarios.py
-
-```
-
-
-
-Test edilen örnek profiller:
-
-
-
-\* Tarih ve mimari
-
-\* Müze ve sanat
-
-\* Doğa ve fotoğraf
-
-\* Gastronomi ve akşam
-
-\* Ücretsiz ve düşük bütçe
-
-\* Çocuklu aile
-
-\* Hızlı ilk ziyaret
-
-\* Yavaş ve rahat gezi
-
-\* Yağmurlu hava
-
-\* Alışveriş ve şehir yaşamı
-
-
-
-\## Öneri Üretme
-
-
-
-Varsayılan kullanıcı profili için öneri üretmek amacıyla:
-
-
-
-```bash
-
 python src/predict.py
-
 ```
-
-
 
 Çıktı:
 
+```text
+reports/latest_recommendations.csv
+```
 
+Her öneri için şu bilgiler üretilir:
+
+* Öneri sırası
+* Lokasyon adı
+* Kategori
+* Alt kategori
+* Enlem ve boylam
+* Tahmini uygunluk puanı
+* Giriş ücreti
+* Ortalama ziyaret süresi
+* Ziyaret zamanı
+* Rezervasyon gereksinimi
+* Aile dostu olma durumu
+* Ulaşım skoru
+* Yürüme zorluğu
+* Öneri nedeni
+
+Örnek öneri açıklaması:
 
 ```text
-
-reports/latest\_recommendations.csv
-
+Tarih ilginizle yüksek uyumlu;
+mimari ilginizle yüksek uyumlu;
+fotoğraf çekimi için uygun;
+belirlediğiniz giriş ücreti sınırına uygun.
 ```
 
+---
 
+# Çok Günlük Gezi Planlama Motoru
 
-\## Saatlik Gezi Planı Oluşturma
-
-
-
-Kullanıcı profiline göre çok günlük saatlik plan oluşturmak için:
-
-
+Makine öğrenmesi önerilerine göre çok günlük ve saatlik plan oluşturmak için:
 
 ```bash
-
-python src/create\_itinerary.py
-
+python src/create_itinerary.py
 ```
-
-
 
 Çıktılar:
 
+```text
+reports/latest_itinerary.csv
+reports/latest_itinerary.xlsx
+reports/latest_itinerary_skipped.csv
+```
 
+Planlama motoru şu kriterleri değerlendirir:
+
+* Kullanıcının ML uygunluk puanı
+* Minimum uygunluk skoru
+* Toplam giriş ücreti bütçesi
+* Günlük başlangıç saati
+* Günlük bitiş saati
+* Ziyaret süreleri
+* Lokasyonlar arası mesafe
+* Yaklaşık ulaşım süresi
+* Günlük maksimum lokasyon sayısı
+* Öğle molası
+* Seyahat temposu
+* Başlangıç koordinatı
+* Rezervasyon durumu
+
+Lokasyonlar arası mesafe Haversine formülü ile hesaplanır.
+
+Gerçek yol mesafesine yaklaşmak için rota mesafesi belirli bir katsayıyla çarpılır.
+
+Örnek 3 günlük plan sonucu:
 
 ```text
-
-reports/latest\_itinerary.csv
-
-reports/latest\_itinerary.xlsx
-
-reports/latest\_itinerary\_skipped.csv
-
+Planlanan gün: 3
+Planlanan lokasyon: 14
+Toplam giriş ücreti: 113 / 120 €
+Toplam rota mesafesi: 10,25 km
+Toplam ulaşım süresi: 247 dakika
+Ortalama uygunluk puanı: 73,28
 ```
 
+---
 
+# Planlama Senaryosu Testleri
 
-Planlama motoru şu koşulları değerlendirir:
-
-
-
-\* ML uygunluk puanı
-
-\* Toplam giriş ücreti
-
-\* Günlük başlangıç ve bitiş saati
-
-\* Ziyaret süreleri
-
-\* Lokasyonlar arası yaklaşık mesafe
-
-\* Yaklaşık ulaşım süresi
-
-\* Günlük maksimum lokasyon sayısı
-
-\* Öğle molası
-
-\* Kullanıcı temposu
-
-
-
-\## Planlama Senaryosu Testleri
-
-
-
-Farklı kullanıcı ve seyahat ayarlarıyla planlama motorunu test etmek için:
-
-
+Farklı kullanıcı ve seyahat ayarlarıyla planlama sistemini test etmek için:
 
 ```bash
-
-python src/test\_itinerary\_scenarios.py
-
+python src/test_itinerary_scenarios.py
 ```
-
-
 
 Test edilen senaryolar:
 
+* Tarih ve mimari
+* Ücretsiz gezi
+* Doğa ve fotoğraf
+* Gastronomi ve akşam
+* Çocuklu aile
+* Hızlı ilk ziyaret
 
+Toplam 6 senaryonun tamamı başarılı şekilde plan oluşturmuştur.
 
-\* Tarih ve mimari
+---
 
-\* Ücretsiz gezi
+# FastAPI Servisi
 
-\* Doğa ve fotoğraf
-
-\* Gastronomi ve akşam
-
-\* Çocuklu aile
-
-\* Hızlı ilk ziyaret
-
-
-
-Her senaryo için ayrı CSV ve Excel plan çıktısı oluşturulur.
-
-
-
-\## FastAPI Sunucusunu Çalıştırma
-
-
+V2 modelinin frontend veya başka sistemler tarafından kullanılabilmesi için FastAPI servis katmanı geliştirilmiştir.
 
 API sunucusunu başlatmak için:
 
-
-
 ```bash
-
 python -m uvicorn api.main:app --reload
-
 ```
 
-
-
-Sunucu varsayılan olarak şu adreste çalışır:
-
-
+Sunucu adresi:
 
 ```text
-
 http://127.0.0.1:8000
-
 ```
-
-
 
 Swagger dokümantasyonu:
 
-
-
 ```text
-
 http://127.0.0.1:8000/docs
-
 ```
 
+---
 
+# API Endpoint'leri
 
-API sağlık kontrolü:
+## Ana Endpoint
 
+```http
+GET /
+```
 
+API hakkında temel bilgi döndürür.
 
-```text
+## Sağlık Kontrolü
 
+```http
 GET /api/health
-
 ```
 
+Örnek cevap:
 
+```json
+{
+  "status": "healthy",
+  "model": "location_recommender_v2",
+  "city": "Rome"
+}
+```
 
-Öneri endpoint’i:
+## Kişiselleştirilmiş Öneriler
 
-
-
-```text
-
+```http
 POST /api/recommendations
-
 ```
 
+Örnek istek:
 
+```json
+{
+  "user_profile": {
+    "history_interest": 2,
+    "museum_interest": 1,
+    "art_interest": 2,
+    "architecture_interest": 3,
+    "photography_interest": 8,
+    "nature_interest": 2,
+    "gastronomy_interest": 10,
+    "shopping_interest": 6,
+    "religious_interest": 1,
+    "budget_level": "medium",
+    "max_entry_fee": 20,
+    "tempo": "normal",
+    "preferred_visit_time": "evening",
+    "rainy_weather": false,
+    "hot_weather": false,
+    "family_friendly_required": false,
+    "free_place_preference": 5
+  },
+  "top_n": 5
+}
+```
 
-Saatlik gezi planı endpoint’i:
-
-
+Bu profil için örnek ilk öneriler:
 
 ```text
-
-POST /api/itineraries
-
+1. Trastevere
+2. Piazza Navona
+3. Campo de' Fiori
+4. St. Peter's Basilica
+5. Spanish Steps
 ```
 
+## Çok Günlük Gezi Planı
 
+```http
+POST /api/itineraries
+```
 
-\## API Testleri
+Bu endpoint:
 
+* Kullanıcı profilini alır.
+* Seyahat ayarlarını alır.
+* Lokasyonları kişiselleştirilmiş olarak puanlar.
+* Bütçe ve zaman kontrollerini yapar.
+* Günlere ve saatlere ayrılmış plan döndürür.
+* Günlük plan özetlerini oluşturur.
+* Atlanan lokasyonları listeler.
+* Sistem limitasyonlarını bildirir.
 
+---
 
-Otomatik testleri çalıştırmak için:
+# Otomatik API Testleri
 
-
+API testlerini çalıştırmak için:
 
 ```bash
-
-python -m pytest tests/test\_api.py -v
-
+python -m pytest tests/test_api.py -v
 ```
 
+Test edilen alanlar:
 
+* Ana endpoint
+* Sağlık endpoint'i
+* Öneri endpoint'i
+* Öneri sayısı doğrulaması
+* İlgi puanı doğrulaması
+* Gezi planı endpoint'i
+* Ücretsiz gezi senaryosu
+* Saat formatı doğrulaması
+* Seyahat günü doğrulaması
 
-Mevcut test kapsamı:
-
-
-
-\* Ana endpoint
-
-\* Sağlık kontrolü
-
-\* Öneri endpoint’i
-
-\* Öneri sayısı doğrulaması
-
-\* İlgi puanı doğrulaması
-
-\* Çok günlük plan endpoint’i
-
-\* Sıfır bütçeli plan
-
-\* Saat formatı doğrulaması
-
-\* Seyahat günü doğrulaması
-
-
-
-Mevcut sonuç:
-
-
+Mevcut test sonucu:
 
 ```text
-
 9 passed
-
 ```
 
+Testler aşağıdaki durumları kontrol eder:
 
+* API'nin doğru cevap vermesi
+* Önerilerin azalan puana göre sıralanması
+* Gastronomi profiline uygun lokasyonların gelmesi
+* Bütçenin aşılmaması
+* Ücretsiz planda ücretli lokasyon bulunmaması
+* Hatalı kullanıcı verilerinin reddedilmesi
+* Hatalı gün ve saat bilgilerinin reddedilmesi
 
-\## Mevcut Kısıtlamalar
+---
 
+# Requirements
 
+Projede kullanılan temel Python paketleri:
 
-\* Açılış ve kapanış saatleri henüz doğrulanmış gerçek verilerle kontrol edilmemektedir.
+```text
+fastapi
+uvicorn
+pydantic
+pandas
+numpy
+scikit-learn
+joblib
+openpyxl
+pytest
+httpx
+```
 
-\* Ulaşım süreleri gerçek yol servisi yerine Haversine mesafesi üzerinden yaklaşık hesaplanmaktadır.
+Tüm paketleri yüklemek için:
 
-\* Her günün ilk lokasyonuna konaklama noktasından ulaşım, başlangıç koordinatı verilmezse hesaplanmamaktadır.
+```bash
+pip install -r requirements.txt
+```
 
-\* Eğitim verileri başlangıç aşamasında sentetik kullanıcı profillerinden oluşturulmuştur.
+---
 
-\* Gerçek kullanıcı geri bildirimleri toplandığında model yeniden eğitilmelidir.
+# Mevcut Limitasyonlar
 
-\* Gastronomi ve alışveriş lokasyonlarının veri çeşitliliği artırılmalıdır.
+* Sistem şu anda yalnızca Roma şehrini desteklemektedir.
+* Açılış ve kapanış saatleri resmi kaynaklardan doğrulanmamaktadır.
+* Ulaşım süreleri gerçek yol servisi yerine yaklaşık mesafe hesabıyla oluşturulmaktadır.
+* Trafik ve toplu taşıma yoğunluğu hesaba katılmamaktadır.
+* Günlük ilk lokasyona ulaşım, başlangıç koordinatı verilmezse hesaplanmamaktadır.
+* Eğitim verileri sentetik kullanıcı profilleriyle oluşturulmuştur.
+* Gerçek kullanıcı puanları henüz sisteme dahil edilmemiştir.
+* Gastronomi ve alışveriş kategorilerinin veri çeşitliliği artırılmalıdır.
+* Giriş ücretleri zaman içinde değişebileceği için resmi kaynaklarla güncellenmelidir.
+* Aynı anda gelen çok sayıda plan isteği için API yapısı ileride yeniden düzenlenmelidir.
 
+---
 
+# V2 Sonucu
 
-\## V2 Sonucu
+V2 sonunda sistem aşağıdaki akışla çalışmaktadır:
 
+```text
+Kullanıcı tercihleri
+        ↓
+Feature Engineering
+        ↓
+Makine Öğrenmesi Modeli
+        ↓
+Lokasyon Uygunluk Puanları
+        ↓
+Kişiselleştirilmiş Öneriler
+        ↓
+Bütçe ve Zaman Kontrolü
+        ↓
+Mesafe ve Rota Hesabı
+        ↓
+Saatlik Çok Günlük Gezi Planı
+        ↓
+JSON, CSV ve Excel Çıktıları
+```
 
+Sistem:
 
-V2 sonunda sistem:
+1. Kullanıcı tercihlerini alır.
+2. Roma'daki 40 lokasyonu kullanıcıya özel puanlar.
+3. Lokasyonları uygunluk puanına göre sıralar.
+4. Her öneri için açıklama üretir.
+5. Bütçe ve zaman koşullarını kontrol eder.
+6. Yakın lokasyonları rota mantığıyla sıralar.
+7. Öğle molalarını plana ekler.
+8. Saatlik ve çok günlük gezi planı oluşturur.
+9. Sonuçları JSON, CSV ve Excel biçimlerinde sunar.
+10. FastAPI üzerinden frontend kullanımına hazır hale getirir.
 
+---
 
+# Gelecek Çalışmalar
 
-1\. Kullanıcı tercihlerini alır.
-
-2\. Roma’daki 40 lokasyonu kişisel olarak puanlar.
-
-3\. En uygun lokasyonları sıralar.
-
-4\. Her öneri için açıklama üretir.
-
-5\. Bütçe ve zaman koşullarını kontrol eder.
-
-6\. Yakın lokasyonları rota mantığıyla sıralar.
-
-7\. Saatlik ve çok günlük gezi planı oluşturur.
-
-8\. Sonuçları JSON, CSV ve Excel biçimlerinde sunar.
-
-
-
+* Next.js frontend formunun geliştirilmesi
+* Kullanıcı kayıt ve giriş sistemi
+* MySQL veritabanı entegrasyonu
+* Plan kaydetme ve geçmiş planları görüntüleme
+* Google Places API entegrasyonu
+* Gerçek açılış ve kapanış saatleri
+* Google Maps veya OpenRouteService rota entegrasyonu
+* Gerçek yol ve ulaşım süresi hesaplama
+* Kullanıcı geri bildirimleriyle modelin yeniden eğitilmesi
+* Yeni şehirlerin sisteme eklenmesi
+* Şehir bağımsız veri pipeline yapısı
+* Gerçek kullanıcı puanlarından öğrenen öneri sistemi
+* Model açıklanabilirliğinin geliştirilmesi
+* Docker desteği
+* Bulut ortamına deployment
+* Mobil uyumlu kullanıcı arayüzü
