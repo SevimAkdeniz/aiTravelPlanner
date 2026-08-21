@@ -17,41 +17,64 @@ export default function LoginForm() {
 
   return (
     <section
-      className="
-        relative
-        flex
-        min-h-screen
-        w-1/2
-        items-center
-        justify-start
-        overflow-hidden
-        bg-[#FAFAF7]
-        pl-[88px]
-        pr-[60px]
-      "
-    >
+  className="
+    relative
+    flex
+    min-h-[100dvh]
+    w-full
+    items-start
+    justify-center
+    overflow-x-hidden
+    overflow-y-auto
+    bg-[#FAFAF7]
+    px-5
+    pb-28
+    pt-24
+
+    sm:px-8
+    sm:pt-28
+
+    lg:min-h-screen
+    lg:w-1/2
+    lg:items-center
+    lg:justify-start
+    lg:overflow-hidden
+    lg:pb-0
+    lg:pl-[88px]
+    lg:pr-[60px]
+    lg:pt-0
+  "
+>
       {/* Back Home */}
       <Link
-        href="/"
-        className="
-          absolute
-          right-[90px]
-          top-[52px]
-          z-20
-          flex
-          items-center
-          gap-3
-          text-[15px]
-          font-medium
-          text-foreground
-        "
-      >
-        <ArrowLeft size={19} />
-        Ana Sayfaya Dön
-      </Link>
+  href="/"
+  className="
+    absolute
+    left-5
+    top-7
+    z-30
+    flex
+    items-center
+    gap-2
+    text-[14px]
+    font-medium
+    text-foreground
+
+    sm:left-8
+
+    lg:left-auto
+    lg:right-[90px]
+    lg:top-[52px]
+    lg:gap-3
+    lg:text-[15px]
+  "
+>
+  <ArrowLeft size={19} />
+  Ana Sayfaya Dön
+</Link>
 
       {/* Dot decoration */}
-      <div className="absolute right-8 top-8 z-10 grid grid-cols-5 gap-[7px] opacity-35">
+      <div className="absolute right-8 top-8 z-10 hidden grid-cols-5 gap-[7px] opacity-35 lg:grid">
         {Array.from({ length: 20 }).map((_, i) => (
           <span
             key={i}
@@ -61,19 +84,41 @@ export default function LoginForm() {
       </div>
 
       {/* FORM CONTENT */}
-      <div className="relative z-20 w-full max-w-[500px] translate-x-[24px] -translate-y-[2px]">
+      <div
+  className="
+    relative
+    z-20
+    w-full
+    max-w-[500px]
+
+    lg:translate-x-[24px]
+    lg:-translate-y-[2px]
+  "
+>
         {/* Header */}
-        <h1 className="text-[44px] font-bold leading-[1.08] tracking-[-0.045em] text-foreground">
-          Tekrar hoş geldin
-        </h1>
+        <h1
+  className="
+    text-[36px]
+    font-bold
+    leading-[1.08]
+    tracking-[-0.045em]
+    text-foreground
+
+    sm:text-[40px]
+    lg:text-[44px]
+  "
+>
+  Tekrar hoş geldin
+</h1>
 
         <div className="mt-4 h-[3px] w-[50px] bg-primary" />
 
-        <p className="mt-5 text-[17px] leading-7 text-muted">
-          Seyahat planlarına devam etmek için
-          <br />
-          hesabına giriş yap.
-        </p>
+        <p className="mt-5 text-[15px] leading-6 text-muted sm:text-[16px] sm:leading-7 lg:text-[17px]">
+  Seyahat planlarına devam etmek için
+  <br className="hidden sm:block" />
+  {" "}
+  hesabına giriş yap.
+</p>
 
         {/* Form */}
         <form
@@ -289,13 +334,25 @@ export default function LoginForm() {
   className="
     pointer-events-none
     absolute
-    bottom-0
+    bottom-[14px]
     left-0
     z-[2]
-    h-[120px]
-    w-[calc(100%-230px)]
-    opacity-30
+
+    h-[78px]
+    w-[76%]
+    opacity-[0.38]
+
+    sm:bottom-[10px]
+    sm:h-[88px]
+    sm:w-[78%]
+    sm:opacity-[0.36]
+
+    lg:bottom-0
+    lg:h-[120px]
+    lg:w-[calc(100%_-_230px)]
+    lg:opacity-30
   "
+  aria-hidden="true"
 >
   <svg
     className="h-full w-full"
@@ -304,15 +361,27 @@ export default function LoginForm() {
     fill="none"
   >
     <path
-      d="M0 80 C150 20 240 120 390 70 C540 20 650 110 800 55"
+      d="
+        M0 78
+        C140 52 230 94 355 74
+        C485 53 590 91 700 70
+        C742 62 772 58 800 55
+      "
       stroke="#F5B000"
-      strokeWidth="1"
+      strokeWidth="1.35"
+      strokeLinecap="round"
     />
 
     <path
-      d="M0 100 C150 40 250 130 400 85 C550 35 650 120 800 75"
+      d="
+        M0 101
+        C145 73 250 111 375 91
+        C500 72 600 108 710 90
+        C750 84 778 81 800 79
+      "
       stroke="#F5B000"
-      strokeWidth="1"
+      strokeWidth="1.35"
+      strokeLinecap="round"
     />
   </svg>
 </div>
